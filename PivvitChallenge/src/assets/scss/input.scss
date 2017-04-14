@@ -1,0 +1,22 @@
+$primary-border-color : #2c343f;
+
+.form-input{
+	border-radius : 0px;
+	border : 1px solid #aaa;
+	padding: 8px;
+	&:focus{
+		border-color : $primary-border-color;
+    outline: none ;
+	}
+}
+
+.form-filed-section{
+  margin-bottom: $D20;
+}
+.form-filed-section label{
+  display: $block;
+  font-size: $D16;
+}
+.form-filed-section input{
+  width: calc(100% - 16px);
+}

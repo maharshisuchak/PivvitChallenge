@@ -1,0 +1,22 @@
+<div class="login-bg">
+  <div class="login-section">
+    <div class="arrow-up"></div>
+    <span class="ti-user ti-font"></span>
+    <form [formGroup]="loginForm" novalidate (submit)="onLogin(loginForm.value,loginForm.valid)">
+      <div class="form-filed-section">
+        <label>Email</label>
+        <input type="text" class="form-input" formControlName="email"/>
+        <validation *ngIf="emailRequired()" [errMsg]="validation.EMAIL"></validation>
+        <validation *ngIf="isValidEmailLength()" [errMsg]="validation.EMAIL_LENGTH"></validation>
+        <validation *ngIf="isValidEmailPattern()" [errMsg]="validation.EMAIL_VALID"></validation>
+      </div>
+      <div class="form-filed-section">
+        <label>Password</label>
+        <input type="password" class="form-input" formControlName="password"/>
+        <validation *ngIf="isValidPasswordLength()" [errMsg]="validation.PASSWORD_LENGTH"></validation>
+        <validation *ngIf="passwordRequired()" [errMsg]="validation.PASSWORD"></validation>
+      </div>
+      <button type="submit" class="primary-btn">Login</button>
+    </form>
+  </div>
+</div>

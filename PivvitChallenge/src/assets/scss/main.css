@@ -1,0 +1,77 @@
+/*$D150 : 150px;*/
+body {
+  font-family: "Muli", sans-serif;
+  font-size: 14px;
+  color: #2c343f;
+  margin: 0px;
+  padding: 0px; }
+
+.arrow-up {
+  border-bottom: 10px solid #ffffff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  position: absolute;
+  right: 18px;
+  top: -10px;
+  width: 0; }
+
+span.ti-font {
+  font-size: 20px; }
+
+/*login css start*/
+.login-section {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 200px !important;
+  padding: 30px;
+  background: #ffffff;
+  position: relative; }
+
+.login-section .ti-font {
+  position: absolute;
+  right: 18px;
+  top: -40px;
+  color: #ffffff; }
+
+.login-bg {
+  background: #2c343f;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px; }
+
+.form-input {
+  border-radius: 0px;
+  border: 1px solid #aaa;
+  padding: 8px; }
+  .form-input:focus {
+    border-color: #2c343f;
+    outline: none; }
+
+.form-filed-section {
+  margin-bottom: 20px; }
+
+.form-filed-section label {
+  display: block;
+  font-size: 16px; }
+
+.form-filed-section input {
+  width: calc(100% - 16px); }
+
+.general-btn, .primary-btn {
+  color: #ffffff;
+  padding: 8px 15px;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.primary-btn {
+  background: #2c343f;
+  border: none; }
+  .primary-btn:focus {
+    outline: none; }
+  .primary-btn:hover {
+    background: #60646f;
+    transition: 0.2s all ease-in; }
+
+/*# sourceMappingURL=main.css.map */

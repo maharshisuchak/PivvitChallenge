@@ -1,0 +1,42 @@
+.body-content {
+  min-height: 550px !important;
+}
+
+.page-not-found-section {
+
+}
+
+.notFoundImage {
+  margin-top: 130px;
+  margin-left: 100px;
+}
+
+.notFoundContent {
+  float: right;
+  margin-top: 50px;
+  width: 600px;
+  height: 500px;
+  font-size: 35px;
+  background: #d84315;
+  text-align: center;
+  color: #fff;
+  border-radius: 100% 0px 0px 0;
+}
+
+.notFoundContent p {
+  line-height: 5em;
+  margin-top: 253px;
+  margin-left: 113px;
+}
+
+.backToHome {
+  margin-top: 89px;
+  margin-left: 50px;
+  font-size: 26px;
+}
+
+.backToHome a {
+  color: #d84315;
+  font-weight: bold;
+  text-decoration: underline;
+}

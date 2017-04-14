@@ -1,0 +1,68 @@
+$main-font-size : 14px;
+$main-font : 'Muli', sans-serif;
+
+$main-transition-effect : 0.2s all ease-in;
+
+$P100 : 100%;
+
+$block : block;
+$none : none;
+$inline : inline;
+
+$relative : relative;
+$absolute : absolute;
+$fixed : fixed;
+
+$pointer : pointer;
+
+$uppercase : uppercase;
+
+body{
+  font-family : $main-font;
+  font-size: $main-font-size;
+  color: $main-text-color;
+  margin: $D0;
+  padding: $D0;
+}
+
+.arrow-up {
+  border-bottom: 10px solid $white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  position: absolute;
+  right: 18px;
+  top: -10px;
+  width: 0;
+}
+
+span.ti-font{
+  font-size: $D20;
+}
+
+
+/*login css start*/
+
+.login-section{
+  width: 300px;
+  margin: $M-auto;
+  margin-top: $D200 !important;
+  padding: $D30;
+  background: $white;
+  position: $relative;
+}
+
+.login-section .ti-font{
+  position: $absolute;
+  right: $D18;
+  top: $DM40;
+  color: $white;
+}
+
+.login-bg{
+  background: $main-bg-color;
+  height: $P100;
+  width: $P100;
+  position: $fixed;
+  left: $D0;
+}

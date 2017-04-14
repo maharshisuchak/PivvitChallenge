@@ -1,0 +1,65 @@
+<button type="button" (click)="logout()">Logout</button>
+
+<br/>
+<br/>
+<br/>
+
+<h3>
+  Purchase List
+</h3>
+
+<div>
+  <table border="1">
+    <tr>
+      <th>
+        Sr. No
+      </th>
+      <th>
+        Purchase ID
+      </th>
+      <th>
+        Offfering Title
+      </th>
+      <th>
+        Quantity
+      </th>
+      <th>
+        Unit price
+      </th>
+      <th>
+        Total
+      </th>
+    </tr>
+    <tr *ngFor="let item of purchaseList; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.offering.title}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.offering.price}}</td>
+      <td>{{item.quantity * item.offering.price}}</td>
+    </tr>
+  </table>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3>
+  Add Purchase
+</h3>
+<div>
+  <form [formGroup]="purchaseAddForm" novalidate (submit)="savePurchase()">
+    Customer name:<input type="text" formControlName="customerName"><br/><br/>
+    Offerings:
+    <select formControlName="offeringID" (change)="offeringSelected($event.target.value)">
+      <option value="" disabled selected>Select Offering</option>
+      <option *ngFor="let item of offeringList" [value]="item.id">
+        {{item.title}}
+      </option>
+    </select>
+    <br/><br/>
+    Quantity:<input type="text" formControlName="quantity" (blur)='calcPrice($event.target.value)'><br/><br/>
+    Total:<input type="text" formControlName="total"><br/><br/>
+    <button type="submit">Add</button>
+  </form>
+</div>
