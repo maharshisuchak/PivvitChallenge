@@ -13,6 +13,28 @@ use Illuminate\Http\Request;
 |
 */
 
+// Login user
+Route::post('/login',[
+	'middleware'	=> 'throttle:20,1',
+	'uses'			=> 'Auth\AuthController@login'
+]);
+
+Route::group(['middleware' => 'jwt.auth'], function(){
+	// Create a purchase
+	Route::post('/purchases', [
+		'uses'		=> 'PurchaseController@store'
+	]);
+	// Get purchases
+	Route::get('/purchases', [
+		'uses'		=> 'PurchaseController@index'
+	]);
+	// Get offerings
+	Route::get('/offering', [
+		'uses'		=> 'OfferingController@index'
+	]);
+});
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
